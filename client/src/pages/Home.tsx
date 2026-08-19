@@ -41,9 +41,9 @@ const staggerContainer = {
 function BackgroundEffects() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      <div className="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] rounded-full bg-gradient-to-br from-[#f9a5a0]/15 to-transparent blur-[100px]" />
-      <div className="absolute top-[30%] right-[-5%] h-[400px] w-[400px] rounded-full bg-gradient-to-bl from-[#f04b4b]/10 to-transparent blur-[100px]" />
-      <div className="absolute bottom-[-10%] left-[20%] h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-[#d1f4e0]/20 to-transparent blur-[120px]" />
+      <div className="absolute top-[-10%] left-[-10%] h-125 w-125 rounded-full bg-linear-to-br from-[#f9a5a0]/15 to-transparent blur-[100px]" />
+      <div className="absolute top-[30%] right-[-5%] h-100 w-100 rounded-full bg-linear-to-bl from-[#f04b4b]/10 to-transparent blur-[100px]" />
+      <div className="absolute bottom-[-10%] left-[20%] h-150 w-150 rounded-full bg-linear-to-tr from-[#d1f4e0]/20 to-transparent blur-[120px]" />
       
       {Array.from({ length: 12 }).map((_, i) => (
         <motion.div
