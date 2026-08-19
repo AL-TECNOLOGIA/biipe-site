@@ -1399,3 +1399,10 @@
         padding: 1.4rem
     }
 }
+.trust-note p { font-size: 17px; }
+.module-pill small { font-size: 0.8rem; }
+.audience-card p { font-size: 1rem; }
+.card-pastel { background-color: #d1f4e0 !important; color: #111315 !important; }
+.card-black { background-color: #111315 !important; color: #ffffff !important; }
+.faq-item p { font-size: 1rem; }
+.section-kicker { font-size: 1rem !important; }
