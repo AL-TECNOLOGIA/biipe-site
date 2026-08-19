@@ -36,42 +36,6 @@ const staggerContainer = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
 };
-
-
-function BackgroundEffects() {
-  return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      <div className="absolute top-[-10%] left-[-10%] h-125 w-125 rounded-full bg-linear-to-br from-[#f9a5a0]/15 to-transparent blur-[100px]" />
-      <div className="absolute top-[30%] right-[-5%] h-100 w-100 rounded-full bg-linear-to-bl from-[#f04b4b]/10 to-transparent blur-[100px]" />
-      <div className="absolute bottom-[-10%] left-[20%] h-150 w-150 rounded-full bg-linear-to-tr from-[#d1f4e0]/20 to-transparent blur-[120px]" />
-      
-      {Array.from({ length: 12 }).map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-[#f04b4b]/20"
-          style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            width: `${Math.random() * 4 + 2}px`,
-            height: `${Math.random() * 4 + 2}px`,
-          }}
-          animate={{
-            y: [0, -60, 0],
-            x: [0, (Math.random() - 0.5) * 60, 0],
-            opacity: [0, 0.6, 0],
-          }}
-          transition={{
-            duration: 10 + Math.random() * 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: Math.random() * 5,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -93,7 +57,7 @@ export default function Home() {
   const scaleEcoBg = useTransform(ecoScroll, [0, 0.5], [0.95, 1]);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#fbfaf7] text-[#111315]"><BackgroundEffects />
+    <div className="min-h-screen overflow-hidden bg-[#fbfaf7] text-[#111315]">
       <div className="top-strip"><div className="container flex h-9 items-center justify-between text-[11px] font-semibold tracking-[0.02em] text-white/80"><span>Gestão clara para quem faz o negócio acontecer.</span><a href="#contato" className="hidden transition-colors hover:text-[#f9b2ad] sm:block">Fale com a equipe Biipe <ArrowRight className="ml-1 inline h-3 w-3" /></a></div></div>
       <header className="sticky top-0 z-40 border-b border-black/6 bg-[#fbfaf7]/90 backdrop-blur-xl">
         <div className="container flex h-18.5 items-center justify-between gap-8">
